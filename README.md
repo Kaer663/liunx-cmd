@@ -192,7 +192,9 @@ mv dir1 dir11
 
 6. **递归查看目录**
 
-- `tree a`
+```bash
+tree a
+```
 
 7. **复制目录**
 
@@ -200,4 +202,6 @@ mv dir1 dir11
 
 8. **tree 命令不存在的话需要安装**
 
-- `yum install tree -y`
+```bash
+yum install tree -y
+```
