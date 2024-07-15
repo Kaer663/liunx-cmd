@@ -65,34 +65,34 @@ touch file1
 2. **删除文件**
 
 ```bash
-		rm -rf file11
+rm -rf file11
 
-		# -r：递归的删除目录下面文件以及子目录下文件。
-		# -f：强制删除，忽略不存在的文件，从不给出提示
+# -r：递归的删除目录下面文件以及子目录下文件。
+# -f：强制删除，忽略不存在的文件，从不给出提示
 ```
 
 3. **修改文件名**
 
 ```bash
-		mv  file1 file11
+mv  file1 file11
 ```
 
 4. **查看文件内容**
 
 ```bash
-    	cat file1
+cat file1
 ```
 
 5. **复制文件**
 
 ```bash
-    	cp file2 file22
+cp file2 file22
 ```
 
 6. **移动文件**
 
 ```bash
-   	mv file1 file11
+mv file1 file11
 ```
 
 7. **编辑文件**
@@ -124,7 +124,8 @@ cat file1 | tail -3
 ```
 
 11. **liunx 服务器上面查找文件**
-    a. find
+
+- find
 
 ```bash
 find / -name httpd.conf
@@ -133,22 +134,19 @@ find / -name httpd.conf
 
 2.updatedb 查找速度快
 
+- 1、建立一个小型数据库 updatedb
+- 2、再数据库里面搜索 locate httpd.conf
+  mlocate 是新型的 locate 比 updatedb 速度更快。
+
 ```bash
-# 1、建立一个小型数据库 updatedb
-
-# 2、再数据库里面搜索 locate httpd.conf
-
 yum install mlocate -y
-
-# mlocate 是新型的 locate 比 updatedb 速度更快。
-
 ```
 
 12. **查找文件里面内容 找到 httpd.conf 里面有 listen**
 
 ```bash
 cat httpd.conf | grep listen
-cat httpd.conf | grep -ignore listen / cat httpd.conf | grep -i listen 忽略大小写
+cat httpd.conf | grep -ignore listen / cat httpd.conf | grep -i listen #忽略大小写
 
 ```
 
@@ -159,3 +157,47 @@ cat httpd.conf | grep -ignore listen / cat httpd.conf | grep -i listen 忽略大
 vi httpd.conf
 
 ```
+
+# 五、Linux 目录管理
+
+1. **创建目录**
+
+```bash
+mkdir dir1 dir2 dir3
+```
+
+2. **删除目录**
+
+```bash
+rm -rf dir1 dir2
+```
+
+- `-r`：递归的删除目录下面文件以及子目录下文件。
+- `-f`：强制删除，忽略不存在的文件，从不给出提示。
+- `rm -rf dir*`：以 `dir` 开头的所有文件删除。
+
+3. **重命名目录或移动目录**
+
+```bash
+mv dir1 dir11
+```
+
+4. **查看目录**
+
+- `ls/ll`
+
+5. **递归创建目录**
+
+- `mkdir -p a/b/c/d/e/f/g`
+
+6. **递归查看目录**
+
+- `tree a`
+
+7. **复制目录**
+
+- `cp -rf wwwroot/ mywwwroot/`
+
+8. **tree 命令不存在的话需要安装**
+
+- `yum install tree -y`
