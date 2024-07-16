@@ -205,3 +205,11 @@ tree a
 ```bash
 yum install tree -y
 ```
+
+# docker
+
+1. 匿名挂载数据卷
+
+```bash
+ docker run -tid --name nginx-82 -p 82:80 -v /mnt/web/:/usr/share/nginx/html nginx
+```
