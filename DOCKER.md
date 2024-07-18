@@ -71,6 +71,19 @@ docker daemon.json 配置阿里云加速器
 vi /etc/docker/daemon.json
 ```
 
+加载配置文件
+
+```bash
+systemctl daemon-reload
+
+```
+
+重启 docker
+
+```bash
+systemctl restart docker
+```
+
 2. -v 指定路径挂载数据卷
 
 ```bash
