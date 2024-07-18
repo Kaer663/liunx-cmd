@@ -41,6 +41,36 @@ yum install docker-ce docker-ce-cli containerd.io -y
 - docker-ce-cli - CLI tools to control the daemon, you can install them on their own if you want
   to control a remote Docker
 
+启动 docker
+
+```bash
+systemctl start docker
+```
+
+开机启动
+
+```bash
+systemctl enable docker
+```
+
+查看 docker 状态
+
+```bash
+systemctl status docker
+```
+
+查看自启动
+
+```bash
+systemctl list-unit-files | grep enabled
+```
+
+docker daemon.json 配置阿里云加速器
+
+```bash
+vi /etc/docker/daemon.json
+```
+
 2. -v 指定路径挂载数据卷
 
 ```bash
